@@ -78,14 +78,14 @@
         </ul>
       <%}%>
       <h1>Recover Password</h1>
-      <form action="/user/forgotpassword" method="post">
+      <form action="/user/forgotpassword" method="post" autocomplete="off">
           <input type="text" name="userid" placeholder="Email ID" required="required" />
           <input type="text" name="phno" placeholder="Mobile number" required="required" />
           <button type="submit" class="btn btn-primary btn-block btn-large">submit</button>
       </form>
       <% if(varified){%>
         <h1>Reset Password</h1>
-        <form action="/user/resetpassword" method="post">
+        <form action="/user/resetpassword" method="post" autocomplete="off">
           <input type="text" name="userid" placeholder="Email ID" required="required" />
           <input type="password" name="password" placeholder="Password" required="required" />
           <input type="password" name="conformpassword" placeholder="Conform Password" required="required" />
