@@ -15,7 +15,7 @@ router.post('/register', function(req,res){
   req.check("name", "Name can not be empty").notEmpty();
   req.check("userid", "Enter a valid email address").isEmail();
   req.check("phno", "Enter a valid 10 digit mobile number").matches(/^\d{10}/g);
-  req.check('password', 'pasword length should be minimum 8 charecters').notEmpty().len(8, 30);
+  req.check('password', 'pasword length should be minimum 8 characters').notEmpty().len(8, 30);
   req.check('password', 'passwords does not match with conform field').equals(conformpassword);
   var error = [];
   var errors = req.validationErrors();
